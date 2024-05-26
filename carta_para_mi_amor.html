@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para mi amor</title>
+    <style>
+        body {
+            font-family: 'Old Standard TT', serif;
+            background-color: #000000;
+            color: #e0d5cc;
+            text-align: center;
+            padding: 50px;
+            background-image: url('rdr2_background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(31, 29, 29, 0.9);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            border: 2px solid #000000;
+        }
+        h1 {
+            color: #000000;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .song {
+            margin-top: 20px;
+        }
+        .cat-animation {
+            position: relative;
+            margin-top: 30px;
+            display: none;
+        }
+        .cat {
+            font-size: 100px;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+        }
+        .message {
+            display: none;
+            font-size: 2em;
+            color: #ffffff;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Esta carta es para ti</h1>
+        <p>Mi niño precioso,</p>
+        <p>Antes de todo, te dedico esta canción, porque expresa perfectamente el profundo deseo que tengo de estar cerca de ti y de compartir momentos llenos de amor y felicidad. Espero que al recibir esta carta, te encuentres un poco más tranquilo y animado. Quiero empezar diciéndote lo mucho que te amo y lo valioso que eres para mí. A veces, las palabras no son suficientes para expresar todo lo que siento por ti, pero hoy quiero intentar transmitir a través de esta carta todo mi apoyo, mi cariño y mi confianza en ti.</p>
+        <p>Sé que últimamente has pasado por momentos difíciles y que te sientes desanimado. La vida a veces nos presenta retos que parecen insuperables, y en esos momentos es fácil sentirse perdido y sin fuerzas. Pero quiero recordarte que no estás solo en esto. Estoy aquí a tu lado, mi vida, para apoyarte y para recordarte lo increíble que eres.</p>
+        <p>He visto cómo has enfrentado obstáculos antes, y sé de lo que eres capaz. Eres una persona fuerte, valiente y determinada. Aunque ahora todo parezca oscuro, confío plenamente en que saldrás adelante, porque tienes una capacidad increíble para sobreponerte a las adversidades.</p>
+        <p>Recuerda aquellos momentos en los que te sentiste igualmente desanimado y cómo, con tu esfuerzo, lograste superar esas dificultades. ¿Te acuerdas de esa vez cuando pensaste que no podrías con aquella presentación? ¿O cuando te sentías abrumado porque no sabias como hacer las fórmulas? En ambas ocasiones, mostraste una fortaleza impresionante, y no hay razón para que esta vez sea diferente.</p>
+        <p>Me gustaría que pensaras en todas las personas que te admiran y te quieren, aquellas que han sido testigos de tu camino y de tus logros. ¿Qué dirían ellos sobre tu capacidad para salir adelante? Estoy segura de que todos coincidirían en que eres una fuente de inspiración y que confían en ti tanto como yo lo hago.</p>
+        <p>Sábes, a veces, la vida nos pide paciencia y perseverancia. Estoy aquí para ayudarte a planear y para celebrar cada pequeño avance contigo.</p>
+        <p>Quiero que sepas que, aunque el camino pueda parecer largo y lleno de obstáculos, cada día es una oportunidad para empezar de nuevo. A veces, lo único que necesitamos es cambiar nuestra perspectiva y recordar que cada desafío es una oportunidad para crecer y aprender.</p>
+        <p>Estoy convencida de que, al final de todo esto, mirarás atrás y te darás cuenta de lo mucho que has crecido y aprendido. Y yo estaré aquí, a tu lado, celebrando cada uno de tus logros, grandes o pequeños. Porque cada paso que das, por pequeño que parezca, es un paso hacia adelante y una prueba de tu increíble fortaleza.</p>
+        <p>Quiero que sepas que siempre puedes contar conmigo. No tienes que enfrentar esto solo. Estoy aquí para escucharte, para apoyarte y para recordarte lo especial que eres. Juntos, podemos superar cualquier cosa. ¿Qué puedo hacer para ayudarte a sentirte mejor hoy?</p>
+        <p>Por favor, nunca olvides lo importante que eres para mí. Eres una persona increíble, con un corazón inmenso y una capacidad enorme para amar y ser amado. Confío plenamente en ti y en tu capacidad</p>
+        <p>Con todo mi amor y apoyo,</p>
+        <p>Romina, la persona que más te ama en todo el mundo.</p>
+        <div class="song">
+            <audio controls autoplay loop>
+                <source src="close_to_you.mp3" type="audio/mpeg">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>
+        </div>
+        <div class="cat-animation" id="catAnimation">
+            <div class="cat" id="cat">🐱</div>
+        </div>
+        <div class="message" id="message">Te amo, así de simple, así de fuerte</div>
+    </div>
+
+    <script>
+        // Mostrar la animación del gato después de 30 segundos
+        setTimeout(function() {
+            var cat = document.getElementById('catAnimation');
+            cat.style.display = 'block';
+        }, 30000);
+
+        // Mostrar el mensaje "Te amo" al hacer clic en el gato
+        document.getElementById('cat').addEventListener('click', function() {
+            var message = document.getElementById('message');
+            message.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
